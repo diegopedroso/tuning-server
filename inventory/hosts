@@ -1,0 +1,7 @@
+[all:vars]
+provider=aws
+ansible_ssh_port=22
+ansible_ssh_user=ubuntu
+
+[init-host]
+

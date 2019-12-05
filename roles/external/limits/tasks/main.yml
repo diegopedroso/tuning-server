@@ -1,0 +1,34 @@
+---
+- name: Modify nofile Soft and Hard Limits
+  become: True
+  pam_limits:
+    domain: "*"
+    limit_type: "-"
+    limit_item: nofile
+    value: 65000
+    use_max: yes
+
+- name: Modify nproc Soft and Hard Limits
+  become: True
+  pam_limits:
+    domain: "*"
+    limit_type: "-"
+    limit_item: nproc
+    value: 65000
+
+# - name: Modify fsize Soft and Hard Limits
+#   become: True
+#   pam_limits:
+#     domain: "*"
+#     limit_type: "-"
+#     limit_item: fsize
+#     value: 1000000
+#     use_max: yes
+
+- name: Modify memlock Soft and Hard Limits
+  become: True
+  pam_limits:
+    domain: "*"
+    limit_type: "-"
+    limit_item: memlock
+    value: unlimited

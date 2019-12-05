@@ -1,0 +1,39 @@
+---
+- name: Update All Packages
+  become: True
+  apt:
+    upgrade: dist
+    update-cache: yes
+    dpkg_options: "force-confold,force-confdef"
+
+- name: Install Packages
+  become: True
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - unzip
+    - supervisor
+    - iotop
+    - htop
+    - traceroute
+    - sysstat
+    - ntp  
+
+- name: Install lxml requirements to maven module
+  apt: "pkg={{ item }} state=present update_cache=yes"
+  become: True
+  with_items:
+    - python-dev
+    - libxml2
+    - libxml2-dev
+    - libxslt1-dev
+    - lib32z1-dev
+    - libssl-dev
+    - zlib1g-dev
+    - python-pip
+
+- pip:
+    name: lxml
+

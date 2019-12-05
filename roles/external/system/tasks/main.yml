@@ -1,0 +1,37 @@
+- name: Copy NTP Configuration Files
+  become: True
+  become_user: root
+  copy:
+    src: "files/{{ item }}"
+    dest: "/etc/{{ item }}"
+    owner: root
+    group: root
+    backup: yes
+  with_items:
+    - ntp.conf
+  tags:
+    - ntp
+
+- name: Start NTP Service
+  become: True
+  become_user: root
+  service:
+    name: ntp.service
+    state: started
+  tags:
+    - ntp
+
+- name: Copy sysctl Configuration File
+  become: True
+  become_user: root
+  copy:
+    src: "files/{{ item }}"
+    dest: "/etc/{{ item }}"
+    owner: root
+    group: root
+    backup: yes
+  with_items:
+    - sysctl.conf 
+  
+- name: Reload sysctl
+  command: sysctl -p

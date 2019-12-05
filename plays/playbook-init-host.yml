@@ -1,0 +1,14 @@
+---
+- name: Configurações básicas da instância | init_server
+  hosts: init-host
+  gather_facts: no
+  become_user: root
+  vars_files:
+    - "../group_vars/sysctl.yml"
+    - "../group_vars/java.yml"
+
+  roles:
+    - role: ../roles/external/locale
+    - role: ../roles/external/packages
+    - role: ../roles/external/limits
+    - role: ../roles/external/system

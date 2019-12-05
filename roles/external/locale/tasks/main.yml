@@ -1,0 +1,9 @@
+---
+- name: Locale Generation
+  become: True
+  locale_gen:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - en_US.UTF-8
+    - pt_BR.UTF-8
