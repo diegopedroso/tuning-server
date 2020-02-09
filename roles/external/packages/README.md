@@ -25,7 +25,3 @@ BSD
 
 Author Information
 ------------------
-
-Bruno Lopes
-
-bruno.llopes@b2wdigital.com

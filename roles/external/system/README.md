@@ -40,19 +40,3 @@ Role Variables
     #[KNL] Kernel behaviour on panic: delay <timeout>/timeout > 0: seconds before rebooting/timeout = 0: wait forever/timeout < 0: reboot immediately
     kernel_panic: 15
 
-Dependencies
-------------
-
-Nenhuma.
-
-License
--------
-
-BSD
-
-Author Information
-------------------
-
-Bruno Lopes
-
-bruno.llopes@b2wdigital
