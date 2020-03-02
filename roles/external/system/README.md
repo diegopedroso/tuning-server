@@ -1,7 +1,7 @@
 System
 =========
 
-Essa role realiza configurações de S.O e rede no arquivo sysctl.
+Essa role realiza configurações de S.O e de rede no arquivo sysctl.
 
 Requirements
 ------------
