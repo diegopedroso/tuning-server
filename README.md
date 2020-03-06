@@ -57,7 +57,15 @@ Essa role realiza a instalação de pacotes básicos nas instâncias.
 
 Python
 =========
+<<<<<<< HEAD
 Essa role instala a versão minima do Python.
+=======
+<<<<<<< HEAD
+Essa role instala o Python minimal.
+=======
+Essa role instala o python minimal.
+>>>>>>> 7fcdf0d... chore/ READ update
+>>>>>>> 2faf4ed4709762aa4a89ea27c7815a0f8d4031b1
 
 
 Limits
