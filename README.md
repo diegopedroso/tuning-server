@@ -24,7 +24,7 @@ Role Variables
     #swap
     swapfile_location: /swapfile
 
-    #swapfile_size: "1G"
+    #swapfile_size: "2G"
     swapfile_size: 0
 
     #swappiness this control is used to define how aggressively the kernel swaps out anonymous memory relative to pagecache and other caches. Increasing the value increases the amount of swapping. The default value is 60.
